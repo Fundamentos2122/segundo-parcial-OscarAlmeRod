@@ -79,6 +79,7 @@ textarea {
 }
 
 /*****UTILITY*****/
+
 .text-center {
     text-align: center;
 }
@@ -117,6 +118,7 @@ textarea {
 
 .color-primary {
     color: var(--color-primary);
+    padding: 0; margin: 0
 }
 
 .bg-primary {
@@ -253,6 +255,7 @@ textarea {
     --gap-cards: 1em;
     margin-inline: calc(-1 * var(--gap-cards));
     row-gap: 1em;
+    
 }
 
 .col {

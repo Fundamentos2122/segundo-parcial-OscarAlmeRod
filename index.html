@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link media="only screen and (max-width: 500px)" href="maxWidth500.css" rel="stylesheet" >
 </head>
 <body class="[ flex ]">
     <section class="[ side-form ] [ bg-primary color-white ]">
         <h1 class="[ text-center ]">RECETARIO</h1>
+
         <form class="[ flow ]" id="form-recipe" autocomplete="off">
             <div class="[ form-group ] [ flow ]">
                 <label for="title">Nombre</label>
@@ -26,25 +28,26 @@
             <div class="[ form-group ] [ flow ]">
                 <label for="title">Agregar ingrediente</label>
                 <div class="input-group">
-                    <input type="text" id="ingredient-name" class="[ form-control ] [ color-gray ]"/>
+                    <input name="ingrediente" type="text" id="ingredient-name" class="[ form-control ] [ color-gray ]"/>
                     <button class="btn" type="button" data-state="white" id="newIng">+</button>
                 </div>
             </div>
             <div>
                 <ul id="ingredient-temp-list" class="[ ing-list ] ">
                     <!-- <li class="[ bg-white color-gray ]">
-                        Ingrediente 1
-                        <button class="close" type="button" >X</button>
+                        <p></p>
+                        <button id = "guardar-ingrediente"class="close" type="button" >X</button>
                     </li> -->
                 </ul>
             </div>
             <div class="[ form-group ]">
-                <button class="btn" type="submit" data-state="secondary">GUARDAR</button>
+                <button id ="guardar"class="btn" type="submit" data-state="secondary">GUARDAR</button>
             </div>
         </form>
     </section>
     <section id="view" class="[ main-content ] [ flow ]">
-        <!-- <h1 class="[ color-primary ] [ text-center ]">Listado de recetas</h1>
+        <!--
+        <h1 class="[ color-primary ] [ text-center ]">Listado de recetas</h1>
         <div class="[ row ] [ flex ]" data-state="wrap">
             <div class="[ col ]">
                 <div class="[ card ] [ bg-secondary color-white ] [ radius shadow ]" card-id="${i.id}">
@@ -58,9 +61,10 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-
-        <!-- <h1 class="[ color-primary ] [ text-center ]">Receta</h1>
+        </div>
+        -->
+        <!--
+        <h1 class="[ color-primary ] [ text-center ]">Receta</h1>
 
         <div class="[ recipe ] [ flex ] [ shadow ]">
             <div class="recipe-img">
@@ -79,6 +83,8 @@
         <div class="text-right">
             <button class="[ btn ]" data-state="primary" onclick="paintRecipeList()">Volver al listado</button>
         </div> -->
+
+
     </section>
     <script src="app.js"></script>
 </body>

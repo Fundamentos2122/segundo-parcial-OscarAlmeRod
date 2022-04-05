@@ -1,0 +1,50 @@
+.flex{
+    flex-direction: column;
+}
+/*****BLOCK*****/
+.side-form {
+    width: 100%;
+    flex-direction: column;
+}
+#view{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.view {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+    display: inline;
+    justify-content: left;
+    align-items: center;
+    margin: auto;
+}
+.recipiente{
+    flex-direction: column;
+}
+.col{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.card img{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.flow{
+   align-items: left;
+    justify-content: left;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.btn {
+    width: 45%;
+}
