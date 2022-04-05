@@ -6,7 +6,7 @@ var lista_recetas = "lista_de_recetas";
 var ingredientes = "lista_de_ingredientes"
 //Acceso a los botones
 const guardar = document.getElementById('guardar');
-const guaradr_ingrediente = document.getElementById('guardar-ingrediente');
+const guaradr_ingrediente = document.getElementById('newIng');
 
 //--------------------EVENTOS---------------------------------------
 //Guardar una receta
@@ -15,34 +15,23 @@ guardar.addEventListener('click', GuardarReceta);
 //Agregar un ingredient
 guaradr_ingrediente.addEventListener('click', GuardarIngrediente);
 
-
-
 //Agregar un ingredient
-function getListaDeIngredientes() {
-    let list = JSON.parse(localStorage.getItem(lista_ingredientes)); //Para leer el objeto
-    if (list === null) 
-        return []; 
-    else 
-        return list;
-}
 function GuardarIngrediente (e){
     e.preventDefault();
     e.stopPropagation();
     //Creamos el twitt
     let ingrediente = {
         id: Date.now(),
-        inigrediente: formulario["ingredient-name"].value,  
+        inigrediente: formulario["ingrediente"].value,  
     };
     let ListaIngrediente = getListaDeIngredientes(); 
     ListaIngrediente.push(ingrediente); 
-    localStorage.setItem(lista_ingredientes, JSON.stringify(ListaIngrediente));
+    localStorage.setItem(ingredientes, JSON.stringify(ListaIngrediente));
     mostrarListaDeIngredientes(); 
 }
 function mostrarListaDeIngredientes() {
     let ListaIngredientes = getListaDeIngredientes();
-    html = ""
-    //En el sigueinte ciclo vamos apilando todos los twitts, como si de un
-    //contador se tratase
+    html = "";
     for(var i = 0; i < ListaIngredientes.length; i++) {
         html += 
                 `<li class="[ bg-white color-gray ]">
@@ -53,7 +42,13 @@ function mostrarListaDeIngredientes() {
     }
     lista_de_ingredientes.innerHTML = html;
 }
-
+function getListaDeIngredientes() {
+    let list = JSON.parse(localStorage.getItem(ingredientes)); //Para leer el objeto
+    if (list === null) 
+        return []; 
+    else 
+        return list;
+}
 //Ver la receta
 
 //Eliminar la receta
